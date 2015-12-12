@@ -92,14 +92,6 @@
 	"buffers":
 	[
 		{
-			"file": "DatabaseInventory.xml",
-			"settings":
-			{
-				"buffer_size": 1747,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "DatabaseInventory.dtd",
 			"settings":
 			{
@@ -161,8 +153,14 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/E/uni/Document Markup Languages/cosc2467.assignment-one"
+	],
 	"file_history":
 	[
+		"/E/uni/Document Markup Languages/cosc2467.assignment-one/DatabaseInventory.xml",
+		"/E/uni/Document Markup Languages/cosc2467.assignment-one/DatabaseInventory.dtd",
 		"/E/c/assign1/assign1.h",
 		"/E/c/assign1/assign1.c",
 		"/E/c/assign1/options1.c",
@@ -288,9 +286,7 @@
 		"/E/dotNET/notes/l2/l2/example35.cs",
 		"/E/dotNET/notes/l2/l2/example36.cs",
 		"/E/dotNET/notes/l1/example09.cs",
-		"/E/dotNET/notes/l2/l2/example22.cs",
-		"/E/dotNET/notes/l2/l2/example25.cs",
-		"/E/dotNET/notes/l2/l2/example23.cs"
+		"/E/dotNET/notes/l2/l2/example22.cs"
 	],
 	"find":
 	{
@@ -334,16 +330,16 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "DatabaseInventory.xml",
-					"semi_transient": false,
+					"file": "DatabaseInventory.dtd",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1747,
+						"buffer_size": 793,
 						"regions":
 						{
 						},
@@ -356,39 +352,9 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "DatabaseInventory.dtd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 793,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								793,
-								793
-							]
-						],
-						"settings":
-						{
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
-						"translation.x": 0.0,
+						"translation.x": -0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
