@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<xs:schema>
+	<xs:element name="DatabaseInventory" minOccurs="1" maxOccurs="1"> 
+		<xs:complexType> 
+			<xs:sequence>
+				<xs:element name="DatabaseName">
+					<xs:complexType> 
+						<xs:sequence>
+							<xs:element name="GlobalDatabaseName" />
+							<xs:element name="OracleSID" />
+							<xs:element name="DatabaseDomain" />
+							<xs:element name="Administrator">
+								<xs:attribute name="EmailAlias" type=""/>
+								<xs:attribute name="Extension" type=""/>
+							</xs:element>
+
+							<xs:element name="DatabaseAttributes" />
+							<xs:element name="Comments" />
+			  		</xs:sequence>
+			  	</xs:complexType>
+			  </xs:element>
+			</xs:sequence> 
+		</xs:complexType> 
+	</xs:element>
+</xs:schema>
+
