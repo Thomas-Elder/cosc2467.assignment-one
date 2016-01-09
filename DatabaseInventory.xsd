@@ -1,33 +1,71 @@
 <?xml version="1.0"?>
-<xs:schema>
+<xsd:schema
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-	<xs:element name="DatabaseInventory" minOccurs="1" maxOccurs="1"> 
-		<xs:complexType> 
-			<xs:sequence>
+	<xsd:element name="DatabaseInventory"> 
+		<xsd:complexType> 
+			<xsd:sequence>
 
-				<xs:element name="DatabaseName">
-					<xs:complexType> 
-						<xs:sequence>
+				<xsd:element name="DatabaseName" minOccurs="1" maxOccurs="unbounded">
+					<xsd:complexType> 
+						<xsd:sequence>
 
-							<xs:element name="GlobalDatabaseName" />
+							<xsd:element name="GlobalDatabaseName" type="xsd:string" />
 
-							<xs:element name="OracleSID" />
+							<xsd:element name="OracleSID" />
 
-							<xs:element name="DatabaseDomain" />
+							<xsd:element name="DatabaseDomain" type="xsd:string" />
 
-							<xs:element name="Administrator">
-								<xs:attribute name="EmailAlias" type=""/>
-								<xs:attribute name="Extension" type=""/>
-							</xs:element>
+							<xsd:element name="Administrator" minOccurs="1" maxOccurs="3">
+								<xsd:complexType mixed="true">
+									<xsd:attribute name="EmailAlias" type="xsd:string"/>
+									<xsd:attribute name="Extension">
+										<xsd:simpleType>
+											<xsd:restriction base="xsd:integer">
+												<xsd:pattern value="[6][0-9][0-9][0-9]" />
+											</xsd:restriction>
+										</xsd:simpleType>
+									</xsd:attribute>
+								</xsd:complexType>
+							</xsd:element>
 
-							<xs:element name="DatabaseAttributes" />
-							<xs:element name="Comments" />
-						</xs:sequence>
+							<xsd:element name="DatabaseAttributes">
+								<xsd:complexType>
+									<xsd:attribute name="Type">
+										<xsd:simpleType>
+											<xsd:restriction base="xsd:string">
+												<xsd:enumeration value="Production" />
+												<xsd:enumeration value="Development" />
+												<xsd:enumeration value="Testing" />
+											</xsd:restriction>
+										</xsd:simpleType>
+									</xsd:attribute>
+									<xsd:attribute name="Version" default="9i">
+										<xsd:simpleType>
+											<xsd:restriction base="xsd:string">
+												<xsd:enumeration value="9i" />
+												<xsd:enumeration value="8i" />
+												<xsd:enumeration value="8" />
+												<xsd:enumeration value="7" />
+											</xsd:restriction>
+										</xsd:simpleType>
+									</xsd:attribute>
+								</xsd:complexType>
+							</xsd:element>
 
-					</xs:complexType>
-				</xs:element>
-			</xs:sequence> 
-		</xs:complexType> 
-	</xs:element>
-</xs:schema>
+							<xsd:element name="Comments">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="1000" />
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+						</xsd:sequence>
+
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence> 
+		</xsd:complexType> 
+	</xsd:element>
+</xsd:schema>
 
