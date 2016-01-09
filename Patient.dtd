@@ -4,13 +4,12 @@
 					ChronicCondition*,
 					LanguageSpoken+,
 					Visit*,
-					Admission* )
->
+					Admission* )>
 
 	<!ATTLIST Patient Name CDATA #REQUIRED>
-	<!ATTLIST Patient Gender CDATA #REQUIRED>
-	<!ATTLIST Patient DateOfBirth CDATA #REQUIRED>
-	<!ATTLIST Patient BloodType CDATA #REQUIRED>
+                	Patient Gender CDATA #REQUIRED
+                	Patient DateOfBirth CDATA #REQUIRED
+                	Patient BloodType CDATA #REQUIRED>
 
 	<!ELEMENT Allergy (#PCDATA)>
 	<!ELEMENT AdverseDrugReaction (#PCDATA)>
@@ -22,8 +21,7 @@
 	<!ELEMENT Visit ( Practitioner,
 					  Symptom+,
 					  Diagnosis,
-					  Prescription* )
-	>
+					  Prescription* )>
 
 		<!ATTLIST Visit DateOfVisit CDATA #REQUIRED>
 
@@ -31,8 +29,8 @@
 		<!-- Practitioner -->
 		<!ELEMENT Practioner>
 
-			<!ATTLIST Practitioner Name CDATA #REQUIRED>
-			<!ATTLIST Practitioner CDATA>
+			<!ATTLIST Practitioner Name CDATA #REQUIRED
+			          Practitioner CDATA>
 			
 		<!-- /Practitioner -->
 	<!-- /Visit -->
@@ -40,11 +38,10 @@
 
 	<!-- Admission -->
 	<!ELEMENT Admission ( ReasonForAdmission,
-						  Procedure* )
-	>
+						  Procedure* )>
 
 		<!ATTLIST Admission DateOfAdmission CDATA #REQUIRED>
-		<!ATTLIST Admission DateOfDischarge CDATA #REQUIRED>
+		          Admission DateOfDischarge CDATA #REQUIRED>
 
 		<!ELEMENT ReasonForAdmission (#PCDATA)>
 		<!ELEMENT Procedure (#PCDATA)>
