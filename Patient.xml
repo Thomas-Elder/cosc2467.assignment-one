@@ -1,97 +1,77 @@
 <?xml version="1.0"  encoding="UTF-8"?>
-<!DOCTYPE Patient SYSTEM "Patient.dtd">
+<!DOCTYPE Patients SYSTEM "Patient.dtd">
 
 <Patients>
 
     <!-- 1-4 -->
-    <Patient name="Tom" gender="male" dateOfBirth="24/03/1986" bloodType="AB+"> 
-   
-        <!-- 5 -->
-        <Allergy allergen="" /> 
-        <Allergy allergen="" />
-       
-        <!-- 6 -->
-        <AdverseDrugReaction drug="" /> 
-        <AdverseDrugReaction drug="" />
-        
-        <!-- 7 -->
-	    <ChronicCondition></ChronicCondition> 
-	    
+    <Patient name="Tom" gender="male" dateOfBirth="24/03/1986" bloodType="ABpos">
+
 	    <!-- 8 -->
-	    <LanguageSpoken></LanguageSpoken>
-	    
+	    <LanguageSpoken>English</LanguageSpoken>
+
 	    <!-- 9 b -->
-	    <Visit dateOfVisit="10/09/2015"> 
-	    
-	        <!-- 9a -->
-	        <Practioner name="Jen Little" type="General Practioner"> 
-	            <!-- empty ? -->
-	        </Practioner>
-	        
-	         <!-- 9c-->
-	        <Symptom>Lethargy</Symptom>
-	        <Symptom>Vomiting</Symptom>
-	        <Symptom>Nausea</Symptom>
-	        
-	        <!-- 9d -->
-		    <Diagnosis>Gastroenteritis</Diagnosis>
-		    
-		    <!-- 9e -->
-		    <Prescription>Maxalon</Prescription> 
+	    <Visit dateOfVisit="10/09/2015">
+
+        <!-- 9a -->
+        <Practitioner name="Jen Little" type="General Practitioner" />
+
+         <!-- 9c-->
+        <Symptom>Lethargy</Symptom>
+        <Symptom>Vomiting</Symptom>
+        <Symptom>Nausea</Symptom>
+
+        <!-- 9d -->
+	    	<Diagnosis>Gastroenteritis</Diagnosis>
+
+	   		 <!-- 9e -->
+	    	<Prescription>Maxalon</Prescription>
 	    </Visit>
-	    
-	    <!-- 10a -->
-	    <Admission dateOfAdmission="" dateOfDischarge=""> 
-	        
-	        <!-- 10b -->
-	        <ReasonForAdmission></ReasonForAdmission>
-	        
-	        <!-- 10c -->
-	        <Procedure></Procedure> 
-	    </Admission>
-   </Patient> 
-   
+   </Patient>
+
    <!-- 1-4 -->
-   <Patient name="" gender="" dateOfBirth="" bloodType=""> 
-   
+   <Patient name="Suzy" gender="female" dateOfBirth="20/06/1978" bloodType="Opos"> 
+
         <!-- 5 -->
-        <Allergy allergen="" /> 
-        <Allergy allergen="" />
-       
+        <Allergy allergen="Peanuts" />
+        <Allergy allergen="Barley" />
+
         <!-- 6 -->
-        <AdverseDrugReaction drug="" /> 
-        <AdverseDrugReaction drug="" />
-        
+        <AdverseDrugReaction drug="Penicillin" />
+        <AdverseDrugReaction drug="Psuedoephidrin" />
+
         <!-- 7 -->
-	    <ChronicCondition></ChronicCondition> 
-	    
+	    <ChronicCondition>Chronic Depression</ChronicCondition>
+
 	    <!-- 8 -->
-	    <LanguageSpoken> </LanguageSpoken>
-	    
+	    <LanguageSpoken>English</LanguageSpoken>
+	    <LanguageSpoken>Bahasa Indonesia</LanguageSpoken>
+
 	    <!-- 9 b -->
-	    <Visit dateOfVisit=""> 
-	    
-	        <!-- 9a -->
-	        <Practioner name="" type=""> </Practioner>
-	        
-	        <!-- 9c-->
-	        <Symptom></Symptom> 
-	        
-	        <!-- 9d -->
-		    <Diagnosis></Diagnosis> 
-		    
-		    <!-- 9e -->
-		    <Prescription></Prescription> 
+	    <Visit dateOfVisit="10/05/2015"> 
+
+        <!-- 9a -->
+        <Practitioner name="Doctor Freud" type="Psychologist" />
+
+        <!-- 9c-->
+        <Symptom>Lethargy</Symptom>
+        <Symptom>Depression</Symptom>
+        <Symptom>Thoughts of self-harm</Symptom>
+
+        <!-- 9d -->
+	    	<Diagnosis>Chronic Depression</Diagnosis>
+
+	    	<!-- 9e -->
+	    	<Prescription>Prozac</Prescription> 
 	    </Visit>
-	    
+
 	    <!-- 10a -->
-	    <Admission dateOfAdmission="" dateOfDischarge=""> 
-	        
+	    <Admission dateOfAdmission="10/10/2015" dateOfDischarge="12/10/2015">
+
 	        <!-- 10b -->
-	        <ReasonForAdmission></ReasonForAdmission> 
-	        
+	        <ReasonForAdmission>Appendicitis</ReasonForAdmission>
+
 	        <!-- 10c -->
-	        <Procedure></Procedure> 
+	        <Procedure>Operation to remove appendix</Procedure>
 	    </Admission>
    </Patient>
 </Patients>

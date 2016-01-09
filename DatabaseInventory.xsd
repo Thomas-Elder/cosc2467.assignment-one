@@ -16,9 +16,9 @@
 
 							<xs:element name="DatabaseAttributes" />
 							<xs:element name="Comments" />
-			  		</xs:sequence>
-			  	</xs:complexType>
-			  </xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
 			</xs:sequence> 
 		</xs:complexType> 
 	</xs:element>

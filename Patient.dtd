@@ -1,63 +1,58 @@
 <!-- Patients -->
 <!ELEMENT Patients (Patient*)>
-    
-    <!-- Patient -->
+
+  <!-- Patient -->
     <!ELEMENT Patient ( Allergy*,
     					AdverseDrugReaction*,
     					ChronicCondition*,
     					LanguageSpoken+,
     					Visit*,
     					Admission* )>
-    
+
     	<!ATTLIST Patient name CDATA #REQUIRED>
-                    	Patient gender (male | female | neither) #REQUIRED
-                    	Patient dateOfBirth CDATA #REQUIRED
-                    	Patient bloodType (O- | O+ | A- | A+ | B- | B+ | AB- | AB+) #REQUIRED> <!--restrict to legit blood types -->
-    
+        <!ATTLIST Patient gender (male | female | neither) #REQUIRED>
+        <!ATTLIST Patient dateOfBirth CDATA #REQUIRED>
+        <!ATTLIST Patient bloodType (Oneg|Opos|Aneg|Apos|Bneg|Bpos|ABneg|ABpos) #REQUIRED> <!--restrict to legit blood types -->
+
     	<!ELEMENT Allergy EMPTY>
-    	    <!ATTLIST Allergy allergen CDATA>
+    	    <!ATTLIST Allergy allergen CDATA #REQUIRED>
     	
     	<!ELEMENT AdverseDrugReaction EMPTY>
-    	    <!ATTLIST AdverseDrugReaction drug CDATA> 
-    	
+    	    <!ATTLIST AdverseDrugReaction drug CDATA #REQUIRED>
+
     	<!ELEMENT ChronicCondition (#PCDATA)>
     	<!ELEMENT LanguageSpoken (#PCDATA)>
-    
-    
+
     	<!-- Visit -->
     	<!ELEMENT Visit ( Practitioner,
     					  Symptom+,
     					  Diagnosis,
     					  Prescription* )>
-    
+
     		<!ATTLIST Visit dateOfVisit CDATA #REQUIRED>
-    
-    
+
     		<!-- Practitioner -->
-    		<!ELEMENT Practioner>
-    
-    			<!ATTLIST Practitioner name CDATA #REQUIRED
-    			          Practitioner type CDATA #REQUIRED>
-    			
+    		<!ELEMENT Practitioner EMPTY>
+			<!ATTLIST Practitioner name CDATA #REQUIRED>
+    			<!ATTLIST Practitioner type CDATA #REQUIRED>
     		<!-- /Practitioner -->
-    		
+
     		<!ELEMENT Symptom (#PCDATA)>
     		<!ELEMENT Diagnosis (#PCDATA)>
     		<!ELEMENT Prescription (#PCDATA)>
-    		
     	<!-- /Visit -->
-    
-    
+
+
     	<!-- Admission -->
     	<!ELEMENT Admission ( ReasonForAdmission,
     						  Procedure* )>
-    
+
     		<!ATTLIST Admission dateOfAdmission CDATA #REQUIRED>
-    		          Admission dateOfDischarge CDATA #REQUIRED>
-    
+    		<!ATTLIST Admission dateOfDischarge CDATA #REQUIRED>
+
     		<!ELEMENT ReasonForAdmission (#PCDATA)>
     		<!ELEMENT Procedure (#PCDATA)>
-    
+
     	<!-- /Admission -->
     <!-- /Patient -->
 <!-- Patients -->
