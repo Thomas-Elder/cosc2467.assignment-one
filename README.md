@@ -55,6 +55,7 @@ The DatabaseInventory.dtd file is an external DTD, existing in a separate file f
 the XML file (DatabaseInventory.xml) referencing it. Both of these files have been
 supplied as a zipped archive called SupportingFiles.zip.
 #### DatabaseInventory.dtd
+```
 <!ELEMENT DatabaseInventory (DatabaseName+)>
 <!ELEMENT DatabaseName (GlobalDatabaseName
 , OracleSID
@@ -73,8 +74,9 @@ supplied as a zipped archive called SupportingFiles.zip.
 <!ATTLIST Administrator Extension CDATA #IMPLIED>
 <!ATTLIST DatabaseAttributes Type (Production|Development|Testing) #REQUIRED>
 <!ATTLIST DatabaseAttributes Version (7|8|8i|9i) "9i">
-
+```
 #### DatabaseInventory.xml
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE DatabaseInventory SYSTEM "DatabaseInventory.dtd">
 <DatabaseInventory>
@@ -97,7 +99,8 @@ database in Archive Log Mode and performing nightly backup ……
 other elements have been omitted here, kindly look at the supplied file
 -->
 </DatabaseInventory>
-
+```
+
 Your task is to create an XML Schema DatabaseInventory.xsd from the given
 DatabaseInventory.dtd and DatabaseInventory.xml.
 
