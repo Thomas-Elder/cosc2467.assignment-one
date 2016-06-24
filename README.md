@@ -19,15 +19,15 @@ be encrypted and will only be accessible to health care professionals. In order 
 the data as portable as possible, patient health care information will be stored as an XML
 document. The Government has not finally decided on all the information that should be
 stored, but it must include at least:
-1. The name of the patient
-2. The gender of the patient
-3. Date of birth (think of an efficient way to serialize this)
-4. Blood type
-5. Any known allergies
-6. Any known adverse drug reactions
-7. Any chronic conditions
-8. Languages spoken
-9. Information about each visit to a medical practitioner, including:
+1.The name of the patient
+2.The gender of the patient
+3.Date of birth (think of an efficient way to serialize this)
+4.Blood type
+5.Any known allergies
+6.Any known adverse drug reactions
+7.Any chronic conditions
+8.Languages spoken
+9.Information about each visit to a medical practitioner, including:
 (a) the type of practitioner, and associated information
 (b) the date of the visit
 (c) the patient’s symptoms
